@@ -20,7 +20,8 @@ function ScuttlePatch(options) {
 
   debug('scuttlebutt id', this.id);
 
-  // backend to persist across restarts
+  // backend to persist across restarts, when not given assumes
+  // fresh start every time
   var persist = this._persist = options.persist || {
     set: function(key, val) {},
     get: function(key) {}
